@@ -1,12 +1,12 @@
 :root {
   box-sizing: border-box;
-  color: #FFF;
-  scroll-behavior: smooth;
+  color: #FFF; 
 }
 
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: inherit; 
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -30,29 +30,24 @@
   margin: 10px 0px 10px 94px;
 }
 
-.navbar-links ul {
+.navbar-links {
   margin: 0;
   padding: 0 90px 0 0;
   display: flex;
 }
 
-.navbar-links li {
-  list-style-type: none;
-}
-
-.navbar-links li a {
+.navbar-links a {
   text-decoration: none;
   color: #FFF;
-  display: block;
-  padding: 10px 10px;
+  padding: 10px;
   transition: all .25s;
 }
 
-.navbar-links li a.disabled {
+.navbar-links a.disabled {
   cursor: not-allowed;
 }
 
-.navbar-links li a:hover {
+.navbar-links a:hover {
   background-color: #FFF;
   color:#000;
   border-radius: 4px;
@@ -77,14 +72,14 @@
   padding-top: 170px;
 }
 
-h1.promo {
+.promo {
   width: 577px;
   font-size: 36px;
   font-weight: bold;
   margin: 30px 0;
 }
 
-h3.incentive {
+.incentive {
   width: 276px;
   height: 23.13px;
   font-size: 18px;
@@ -131,14 +126,25 @@ h3.incentive {
 
 .staff-member--container {
   display: flex;
+  align-items: center;
 }
 
 .staff-member--container:nth-of-type(odd) {
-  flex-direction: row;
+  flex-direction: row;  
 }
 
 .staff-member--container:nth-of-type(even) {
   flex-direction: row-reverse;
+}
+
+.staff-member--container:nth-of-type(odd) h4, .staff-member--container:nth-of-type(odd) a {
+  display: block;
+  text-align: left;
+}
+
+.staff-member--container:nth-of-type(even) h4, .staff-member--container:nth-of-type(even) a {
+  display: block;
+  text-align: right;
 }
 
 .staff-member--image {
@@ -157,27 +163,13 @@ h3.incentive {
   background-image: url("https://randomuser.me/api/portraits/men/72.jpg");
 }
 
-.username--second, .profile-page--second {
-  text-align: right;
-}
-
-.profile-page--first a {
+.profile-page {
   text-decoration: none;
   color: #000;
   transition: color .15s linear;
 }
 
-.profile-page--second a {
-  text-decoration: none;
-  color: #000;
-  transition: color .15s linear;
-}
-
-.profile-page--first a:hover {
-  color: #4E4E4E;
-}
-
-.profile-page--second a:hover {
+.profile-page:hover {
   color: #4E4E4E;
 }
 
@@ -263,20 +255,16 @@ h3.incentive {
   margin: 10px 0px 10px 94px;
 }
 
-.social-links ul {
+.social-links {
   display: flex;
   margin: 10px 94px 10px 0;
 }
 
-.social-links li {
-  list-style-type: none;
-}
-
-.social-links li a {
+.social-links a {
   text-decoration: none;
-  padding: 0 10px;
+  margin: 0 10px;
   color: white;
-  font-size: 1.8rem;
+  font-size: 30px;
   transition: color .15s linear;
 }
 
